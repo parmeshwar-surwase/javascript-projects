@@ -1,9 +1,27 @@
-body{
-    background-color: black;
-    color:aqua;
-}
+   body{
+      font-family: Arial;
+      text-align:center;
+      margin-top:50px;
+    }
 
-.completed {
-  text-decoration: line-through;
-  color: gray;
-}
+    #taskInput{
+      padding:8px;
+      width:200px;
+    }
+
+    button{
+      padding:8px 12px;
+      margin-left:5px;
+      cursor:pointer;
+    }
+
+    li{
+      margin:10px;
+      list-style:none;
+      font-size:18px;
+    }
+
+    .completed{
+      text-decoration: line-through;
+      color: gray;
+    }
