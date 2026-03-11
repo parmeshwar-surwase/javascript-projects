@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.done{
+text-decoration: line-through;
+color: gray;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Tasks</h2>
+
+<input id="taskInput">
+<button id="addBtn">Add</button>
+
+<ul id="tasks"></ul>
+
+<script>
+
+const input = document.querySelector("#taskInput");
+const btn = document.querySelector("#addBtn");
+const list = document.querySelector("#tasks");
+
+btn.addEventListener("click", function(){
+
+    const text = input.value;
+
+    if(text==="") return;
+
+    const li = document.createElement("li");
+    li.textContent = text;
+
+    li.addEventListener("click", function(){
+        li.classList.toggle("done");
+    });
+
+    list.append(li);
+
+    input.value="";
+
+});
+
+</script>
+
+</body>
+</html>
